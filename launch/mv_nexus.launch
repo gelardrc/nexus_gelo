@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find nexus_gelo)/maps/subs_1_grid.yaml"/>-->
+    <include file="$(find nexus_gelo)/launch/amcl.launch" /> <!-- gelo : alterado -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find nexus_gelo)/confs/nexus/move_base_conf/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+        <rosparam file="$(find nexus_gelo)/confs/nexus/move_base_conf/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find nexus_gelo)/confs/nexus/move_base_conf/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find nexus_gelo)/confs/nexus/move_base_conf/global_costmap_params.yaml" command="load" /> 
+       <rosparam file="$(find nexus_gelo)/confs/nexus/move_base_conf/base_local_planner_params.yaml" command="load" />
+
+    </node>
+
+</launch> 
