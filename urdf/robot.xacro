@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="juninho" >
  <xacro:include filename="$(find nexus_gelo)/urdf/nexus/nexus_4wd_mecanum.xacro"/>
  <include filename="$(find nexus_gelo)/urdf/sensors/lidar.xacro"/>
- <xacro:laser>
- 	<origin xyz="0 0 0.07" rpy="0 0 0"/>
- </xacro:laser>
+ <!--xacro:laser>
+    <origin xyz="0 0 0.07" rpy="0 0 0" />
+ </xacro:laser-->
 </robot>
