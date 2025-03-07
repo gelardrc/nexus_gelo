@@ -63,6 +63,6 @@
             <visualize>false</visualize>
         </sensor>
     </gazebo>
-	</xacro:macro>
+	<!--/xacro:macro-->
 
 </robot>
